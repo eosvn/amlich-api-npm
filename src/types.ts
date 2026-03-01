@@ -20,6 +20,12 @@ export type DayResponse = {
   lunar?: unknown;
 } & UnknownFields;
 
+export type DaysResponse = {
+  from?: string;
+  to?: string;
+  days?: unknown[];
+} & UnknownFields;
+
 export type MonthResponse = {
   year: number;
   month: number;

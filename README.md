@@ -39,11 +39,13 @@ Constructor options:
 ```ts
 await api.today(7);
 await api.day("2026-02-21", 7, 22);
+await api.days("2026-03-01", "2026-04-05", 7);
 await api.month(2026, 2, 7);
 ```
 
 - `today(tz?: number)` -> `GET /today`
 - `day(date: string, tz?: number, hour?: number)` -> `GET /day`
+- `days(from: string, to: string, tz?: number)` -> `GET /days`
 - `month(year: number, month: number, tz?: number)` -> `GET /month`
 
 ### Tra cứu can chi / tương hợp

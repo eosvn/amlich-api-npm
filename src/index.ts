@@ -5,6 +5,7 @@ import type {
   ConvertRequest,
   ConvertResponse,
   DayResponse,
+  DaysResponse,
   MonthResponse,
   NapAmResponse,
   NgayKyResponse,
@@ -26,6 +27,7 @@ export type {
   ConvertRequest,
   ConvertResponse,
   DayResponse,
+  DaysResponse,
   MonthResponse,
   NapAmResponse,
   NgayKyResponse,
@@ -96,6 +98,14 @@ export class AmLichClient {
       date,
       tz,
       hour,
+    });
+  }
+
+  days(from: string, to: string, tz?: number): Promise<DaysResponse> {
+    return this.get<DaysResponse>("/days", {
+      from,
+      to,
+      tz,
     });
   }
 
